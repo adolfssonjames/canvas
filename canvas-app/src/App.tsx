@@ -2,12 +2,34 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  Link,
+  Outlet,
+  RouterProvider,
+} from "react-router-dom";
+import { Banner } from "./components/banner";
+import { Home } from "./pages/Home";
+import { Contact } from "./pages/Contact";
 
 function App() {
   const [count, setCount] = useState(0);
 
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<Root />}>
+        <Route index element={<Home />} />
+        <Route path="/Contact" element={<Contact />} />
+      </Route>
+    )
+  );
+
   return (
     <>
+      <RouterProvider router={router} />
+      <Banner />
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -31,5 +53,18 @@ function App() {
     </>
   );
 }
+const Root = () => {
+  return (
+    <>
+      <div>
+        <Link to="/"> Home</Link>
+        <Link to="/contact"> Contact</Link>
+      </div>
+      <div>
+        <Outlet></Outlet>
+      </div>
+    </>
+  );
+};
 
 export default App;
