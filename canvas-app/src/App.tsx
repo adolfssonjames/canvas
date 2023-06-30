@@ -13,6 +13,7 @@ import {
 import { Banner } from "./components/banner";
 import { Home } from "./pages/Home";
 import { Contact } from "./pages/Contact";
+import { News } from "./pages/News";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,6 +22,7 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route index element={<Home />} />
+        <Route path="/news" element={<News />} />
         <Route path="/Contact" element={<Contact />} />
       </Route>
     )
@@ -58,7 +60,8 @@ const Root = () => {
     <>
       <div>
         <Link to="/"> Home</Link>
-        <Link to="/contact"> Contact</Link>
+        <Link to="/news">Nyheter</Link>
+        <Link to="/contact"> kontakta oss</Link>
       </div>
       <div>
         <Outlet></Outlet>
