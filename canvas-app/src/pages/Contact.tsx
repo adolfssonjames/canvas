@@ -1,33 +1,49 @@
-import { useForm, SubmitHandler } from "react-hook-form";
-
-type Inputs = {
-  example: string;
-  exampleRequired: string;
-};
-
+import { useMultiLevel } from "../hooks/useMultiLevel";
+import { CustomerDetails } from "../components/customerDetails";
+import { CustomerMessage } from "../components/customerMessage";
+import { FormEvent } from "react";
 export const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const { levels, currentLevelTracker, level, back, next } = useMultiLevel([
+    <CustomerDetails />,
+    <CustomerMessage />,
+  ]);
 
-  console.log(watch("example")); // watch input value by passing the name of it
+  function onSubmit(event: FormEvent) {
+    event.preventDefault();
+    next();
+  }
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
-    <form onSubmit={handleSubmit(onSubmit)}>
-      {/* register your input into the hook by invoking the "register" function */}
-      <input defaultValue="test" {...register("example")} />
-
-      {/* include validation with required or other standard HTML validation rules */}
-      <input {...register("exampleRequired", { required: true })} />
-      {/* errors will return when field validation fails  */}
-      {errors.exampleRequired && <span>This field is required</span>}
-
-      <input type="submit" />
-    </form>
+    <main>
+      <h1>Contact</h1>
+      <section
+        style={{
+          position: "relative",
+          background: "white",
+          border: "1px solid black",
+          padding: "2rem",
+          margin: "1rem",
+          borderRadius: ".5rem",
+          fontFamily: "Arial",
+        }}
+      >
+        <form onSubmit={onSubmit}>
+          <div style={{ position: "absolute", top: ".5rem", right: ".5rem" }}>
+            {currentLevelTracker + 1} / {levels.length}
+          </div>
+          {level}
+          <div>
+            {currentLevelTracker !== 0 && (
+              <button type="button" onClick={back}>
+                back
+              </button>
+            )}
+            <button type="submit">
+              {currentLevelTracker === levels.length - 1 ? "finish" : "next"}
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
   );
 };

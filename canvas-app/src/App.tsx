@@ -1,4 +1,3 @@
-import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
@@ -10,14 +9,11 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-import { Banner } from "./components/banner";
 import { Home } from "./pages/Home";
 import { Contact } from "./pages/Contact";
 import { News } from "./pages/News";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
@@ -31,7 +27,7 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
-      <Banner />
+
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -42,9 +38,6 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count} Yas
-        </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
