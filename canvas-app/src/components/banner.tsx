@@ -5,7 +5,8 @@ export const Banner = () => {
         <h2>reminders</h2>
         <li>implement react router dom completed!</li>
         <li>
-          we need to implement tailwind and connect Mongo DB with express!
+          we need to implement tailwind or sass and connect Mongo DB with
+          express!
         </li>
       </ul>
     </div>
