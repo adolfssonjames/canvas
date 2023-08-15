@@ -1,7 +1,7 @@
 import { FormEvent } from "react";
-import { useMultiLevel } from "../hooks/useMultiLevel";
-import { CustomerDetails } from "./customerDetails";
-import { CustomerMessage } from "./customerMessage";
+import { useMultiLevel } from "../../hooks/useMultiLevel";
+import { CustomerDetails } from "./CustomerDetails";
+import { CustomerMessage } from "./CustomerMessage";
 
 export default function ContactForm() {
   const { levels, currentLevelTracker, level, back, next } = useMultiLevel([

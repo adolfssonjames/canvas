@@ -1,9 +1,11 @@
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/Contact/ContactForm";
+import ContactStaff from "../components/Contact/ContactStaff";
 
 export const Contact = () => {
   return (
     <main>
       <h1>Contact</h1>
+      <ContactStaff />
       <section
         style={{
           position: "relative",
@@ -15,9 +17,7 @@ export const Contact = () => {
           fontFamily: "Arial",
         }}
       >
-        <div>
-          <ContactForm />
-        </div>
+        <ContactForm />
       </section>
     </main>
   );
