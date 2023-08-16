@@ -1,36 +1,52 @@
-import { FormEvent } from "react";
-import { useMultiLevel } from "../../hooks/useMultiLevel";
-import { CustomerDetails } from "./CustomerDetails";
-import { CustomerMessage } from "./CustomerMessage";
-
-export default function ContactForm() {
-  const { levels, currentLevelTracker, level, back, next } = useMultiLevel([
-    <CustomerDetails />,
-    <CustomerMessage />,
-  ]);
-
-  function onSubmit(event: FormEvent) {
-    event.preventDefault();
-    next();
-  }
+export function ContactForm() {
   return (
-    <div>
-      <form onSubmit={onSubmit}>
-        <div style={{ position: "absolute", top: ".5rem", right: ".5rem" }}>
-          {currentLevelTracker + 1} / {levels.length}
+    <main className="flex flex-col">
+      <section className="flex flex-row pt-16 gap-4 flex-wrap items-center justify-center">
+        <div className="flex flex-col">
+          <label className="px-4"> Namn </label>
+          <input
+            placeholder="Ditt namn"
+            className="bg-slate-200 text-center rounded h-8"
+            autoFocus
+            required
+            type="text"
+          />
         </div>
-        {level}
-        <div>
-          {currentLevelTracker !== 0 && (
-            <button type="button" onClick={back}>
-              back
-            </button>
-          )}
-          <button type="submit">
-            {currentLevelTracker === levels.length - 1 ? "finish" : "next"}
-          </button>
+        <div className="flex flex-col">
+          <label className="px-4"> Email </label>
+          <input
+            placeholder=" din e-post adress"
+            className="bg-slate-200 text-center rounded h-8"
+            required
+            type="email"
+          />
         </div>
-      </form>
-    </div>
+        <div className="flex flex-col">
+          <label className="px-4"> Telefon (valfritt) </label>
+          <input
+            placeholder="Ditt nummer"
+            className="bg-slate-200 text-center rounded h-8"
+            type="tel"
+          />
+        </div>
+      </section>
+      <div className="flex flex-col justify-center items-center mt-6">
+        <label>Ämne</label>
+        <select className="h-6 flex items-center justify-center w-80">
+          <option value="" disabled selected hidden>
+            Vad gäller ditt ärende?
+          </option>
+          <option value="tjejkväll">Boka Tjejkväll</option>
+          <option>Boka garderobrensning</option>
+          <option>Rådfråga</option>
+          <option>Annat</option>
+        </select>
+      </div>
+      <div className=" mt-4">
+        <label> Vänligen skriv ditt meddelande till oss nedan </label>
+        <br></br>
+        <textarea className="bg-slate-200 w-80" />
+      </div>
+    </main>
   );
 }
