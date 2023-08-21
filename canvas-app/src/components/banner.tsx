@@ -1,14 +1,8 @@
 export const Banner = () => {
   return (
     <div>
-      <ul className="reminderList">
-        <h2>reminders</h2>
-        <li>implement react router dom completed!</li>
-        <li>
-          we need to implement tailwind or sass and connect Mongo DB with
-          express!
-        </li>
-      </ul>
+      Lägg till intro / välkommen Banner <br></br> Lägg till länk-kort till
+      olika sidor
     </div>
   );
 };
