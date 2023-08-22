@@ -31,7 +31,7 @@ function App() {
 const Root = () => {
   return (
     <>
-      <div>
+      <div className="navbar">
         <Link to="/"> Home</Link>
         <Link to="/news">Nyheter</Link>
         <Link to="/contact"> kontakta oss</Link>

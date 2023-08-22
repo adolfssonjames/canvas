@@ -1,10 +1,10 @@
 export function ContactForm() {
   return (
-    <main className="flex flex-col shadow-xl shadow-black-400 rounded p-10 bg-zinc-600/50 text-white">
+    <main className="flex flex-col shadow-xl shadow-black-400 rounded-xl p-14 bg-emerald-600/60 text-white shadow-lg shadow-emerald-600/70">
       <div className="flex flex-col">
         <label className="px-4"> Namn* </label>
         <input
-          className="bg-teal-300/50 text-center rounded h-8 text-white"
+          className=" bg-white text-center rounded h-8 text-black border-white border-2 focus:outline-none focus:border-amber-200 "
           autoFocus
           required
           type="text"
@@ -14,7 +14,7 @@ export function ContactForm() {
         <div className="flex flex-col">
           <label className="px-4"> E-postadress* </label>
           <input
-            className="bg-teal-300/50 text-center rounded h-8 text-white"
+            className="bg-white text-center rounded h-8 text-black border-white border-2 focus:outline-none focus:border-amber-200"
             required
             type="email"
           />
@@ -22,14 +22,14 @@ export function ContactForm() {
         <div className="flex flex-col">
           <label className="px-4"> Telefonnummer </label>
           <input
-            className="bg-teal-300/50 text-center rounded h-8 text-white"
+            className="bg-white text-center rounded h-8 text-black border-white border-2 focus:outline-none focus:border-amber-200"
             type="tel"
           />
         </div>
       </section>
       <div className="flex flex-col justify-center items-center mt-6">
         <label>Ämne</label>
-        <select className="h-6 flex items-center justify-center w-80 bg-teal-300/50 text-white">
+        <select className=" w-full h-6 flex rounded items-center justify-center w-80 text-black border-white border-2 focus:outline-none focus:border-amber-200 ">
           <option value="" disabled selected hidden>
             Vad gäller ditt ärende?
           </option>
@@ -42,7 +42,7 @@ export function ContactForm() {
       <div className=" mt-4 ">
         <label> Meddelande* </label>
         <br></br>
-        <textarea className=" w-80 bg-teal-300/50 text-white" />
+        <textarea className=" w-full text-center bg-white rounded text-black border-white border-2 focus:outline-none focus:border-amber-200" />
       </div>
     </main>
   );
