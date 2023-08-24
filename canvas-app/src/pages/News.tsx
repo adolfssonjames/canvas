@@ -1,7 +1,7 @@
 export const News = () => {
   return (
-    <main>
-      <h1>News</h1>
+    <main className="pt-24">
+      <h2 className="text-3xl">Nyheter</h2>
       <div>lägg in instagram content här!</div>
     </main>
   );

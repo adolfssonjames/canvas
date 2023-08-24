@@ -1,7 +1,7 @@
 export default function ContactStaff() {
   return (
-    <section className=" flex flex-row items-center justify-center gap-20 pt-16 pb-10">
-      <div className="flex items-center justify-center flex-col bg-emerald-600/60 rounded-xl gap-40">
+    <section className=" flex flex-row items-center justify-center gap-20 pt-16 pb-10 flex-wrap gap-40">
+      <div className="flex items-center justify-center flex-col bg-emerald-600/60 rounded-xl gap-40 ">
         <img
           className="h-96 object-scale-down rounded-md absolute  "
           src="public/images/pawel-czerwinski-KWpm9MmEo2s-unsplash.jpg"
@@ -19,7 +19,7 @@ export default function ContactStaff() {
         </div>
       </div>
 
-      <div className="flex items-center justify-center flex-col bg-emerald-600/60 rounded-xl gap-40 m-20">
+      <div className="flex items-center justify-center flex-col bg-emerald-600/60 rounded-xl gap-40 ">
         <img
           className="h-96 object-scale-down rounded-md absolute "
           src="public/images/pawel-czerwinski-KWpm9MmEo2s-unsplash.jpg"
