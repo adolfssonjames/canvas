@@ -32,7 +32,9 @@ const Root = () => {
   return (
     <>
       <div className="float-left absolute flex flex-wrap m-10">
-        <h1 className="logo-text">Soul Sisters</h1>
+        <header>
+          <h1 className="logo-text">Soul Sisters</h1>
+        </header>
       </div>
       <div className="navbar">
         <NavLink
