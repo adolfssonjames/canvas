@@ -3,7 +3,7 @@ export default function ContactStaff() {
     <section className=" flex flex-row items-center justify-center gap-20 pt-16 pb-10 flex-wrap ">
       <div className=" h-96 pl-5 pr-5 flex items-center justify-center flex-col rounded-xl gap-2 ">
         <img
-          className="relative h-auto w-52 rounded-full"
+          className="relative h-auto w-52 rounded-full drop-shadow-md mb-5"
           src="public/images/ulrikaprofilvit1.jpg"
           alt="Profile-picture"
         />
@@ -21,7 +21,7 @@ export default function ContactStaff() {
 
       <div className="h-96 pl-5 pr-5 flex items-center justify-center flex-col rounded-xl gap-2">
         <img
-          className="relative h-auto w-52 rounded-full"
+          className="relative h-auto w-52 rounded-full drop-shadow-md mb-5"
           src="public/images/carinaprofilvit1.jpg"
           alt="Profile-picture"
         />

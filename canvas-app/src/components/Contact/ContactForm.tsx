@@ -6,7 +6,6 @@ export function ContactForm() {
           <label className="px-4"> Namn* </label>
           <input
             className=" bg-white text-center rounded h-8 text-black border-white border-2 focus:outline-none focus:border-amber-200 "
-            autoFocus
             required
             type="text"
           />
