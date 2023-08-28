@@ -1,13 +1,11 @@
 export const Banner = () => {
   return (
     <div>
-      <article>
-        <h2>Welcome to Soul Sisters</h2>
-        <h4>We are based in Bollnäs Hälsingland</h4>
-        <p>
-          {" "}
-          Run by two professional clothing specialists with over 25+ years of
-          experience.
+      <article className="flex flex-col items-center">
+        <h2 className="text-3xl">Welcome to Soul Sisters</h2>
+        <p className="text-lg w-3/5">
+          We are based in Bollnäs Hälsingland. Runned by two professional
+          clothing specialists with over 25+ years of experience
         </p>
       </article>
       Lägg till intro / välkommen Banner <br></br> Lägg till länk-kort till länk
