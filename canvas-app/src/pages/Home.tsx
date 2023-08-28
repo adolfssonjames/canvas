@@ -15,8 +15,9 @@ export const Home = () => {
 
   return (
     <main className="pt-24 flex items-center justify-center flex-col">
+ dev/homepage-design
       <div>test</div>
-      <div>
+
         <a href="/contact#section2">Gå till Bokning</a>
       </div>
       <Banner />
