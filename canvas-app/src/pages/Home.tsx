@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Banner } from "../components/Banner";
 import { ContentCards } from "../components/ContentCards";
 
@@ -12,17 +13,17 @@ export const Home = () => {
     },
     { imgSrc: "images/testname2.jpg", imgAlt: "hej", text: "Clothes" },
   ];
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <main className="pt-24 flex items-center justify-center flex-col">
- dev/homepage-design
-      <div>test</div>
-
+      <Banner />
+      <div>
         <a href="/contact#section2">Gå till Bokning</a>
       </div>
-      <Banner />
-      <div className="border-b-2 border-slate-100 w-full m-5"></div>
-      more components goes here
+      <div className="border-b-2 border-slate-100 w-3/4 m-5"></div>
+
       <ContentCards cardData={cardData} />
     </main>
   );
