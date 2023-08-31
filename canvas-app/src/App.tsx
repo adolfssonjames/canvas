@@ -71,9 +71,7 @@ const Root = () => {
       <div>
         <Outlet></Outlet>
       </div>
-      <footer className="min-h-screen bg-slate-200 flex flex-col mt-auto">
-        footer
-      </footer>
+      <footer className="min-h-screen flex flex-col mt-auto">footer</footer>
     </>
   );
 };
