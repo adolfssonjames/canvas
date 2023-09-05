@@ -36,12 +36,12 @@ const Root = () => {
           <h1 className="logo-text">Soul Sisters</h1>
         </header>
       </div>
-      <div className="navbar">
+      <div className="navbar h-12 pt-1.5">
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "underline underline-offset-8 decoration-2 p-2 m-2"
-              : "p-2 m-2"
+              ? "underline underline-offset-8 decoration-2 p-2 m-2 text-2xl text-emerald-800 font-normal"
+              : "p-2 m-2 text-2xl font-normal"
           }
           to="/"
         >
@@ -50,8 +50,8 @@ const Root = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "underline underline-offset-8 decoration-2 p-2 m-2"
-              : "p-2 m-2"
+              ? "underline underline-offset-8 decoration-2 p-2 m-2 text-2xl text-emerald-800 font-normal"
+              : "p-2 m-2 text-2xl font-normal"
           }
           to="/news"
         >
@@ -60,8 +60,8 @@ const Root = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? "underline underline-offset-8 decoration-2 p-2 m-2"
-              : "p-2 m-2"
+              ? "underline underline-offset-8 decoration-2 p-2 m-2 text-2xl text-emerald-800 font-normal"
+              : "p-2 m-2 text-2xl font-normal"
           }
           to="/contact"
         >

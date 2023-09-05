@@ -1,10 +1,7 @@
-interface CardData {
-  imgSrc: string;
-  imgAlt: string;
-  text: string;
-}
+import { CardData } from "../types/cardDataTypes";
 
 interface ContentCardsProps {
+  // FLYTTA DETTA TILL TYPES MAPP OCH FIL
   cardData: CardData[];
 }
 
@@ -15,7 +12,7 @@ export const ContentCards = ({ cardData }: ContentCardsProps) => {
         {cardData.map((card, index) => (
           <article
             key={index}
-            className="w-60 border m-5 flex flex-col rounded-2xl flex justify-around cursor-pointer pb-4"
+            className="w-72 border m-5 flex flex-col rounded-2xl flex justify-around cursor-pointer pb-4"
           >
             <img
               src={card.imgSrc}
