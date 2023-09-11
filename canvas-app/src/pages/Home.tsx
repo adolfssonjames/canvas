@@ -20,6 +20,7 @@ export const Home = () => {
     <main className="pt-24 flex items-center justify-center flex-col">
       <Banner />
       <div>
+        <a href="/contact#section2">Besök vår butik</a>
         <a href="/contact#section2">Gå till Bokning</a>
       </div>
       <div className="border-b-2 border-slate-100 w-3/4 m-5"></div>

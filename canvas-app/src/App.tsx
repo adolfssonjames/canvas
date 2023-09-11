@@ -10,6 +10,7 @@ import {
 import { Home } from "./pages/Home";
 import { Contact } from "./pages/Contact";
 import { News } from "./pages/News";
+import { About } from "./pages/About";
 
 function App() {
   const router = createBrowserRouter(
@@ -18,6 +19,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/news" element={<News />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
       </Route>
     )
   );
@@ -66,6 +68,16 @@ const Root = () => {
           to="/contact"
         >
           Kontakt
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            isActive
+              ? "underline underline-offset-8 decoration-2 p-2 m-2 text-2xl text-emerald-800 font-normal"
+              : "p-2 m-2 text-2xl font-normal"
+          }
+          to="/about"
+        >
+          Om oss
         </NavLink>
       </div>
       <div>
