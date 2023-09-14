@@ -4,7 +4,7 @@ export default function ContactStaff() {
       <div className=" h-96 pl-5 pr-5 flex items-center justify-center flex-col rounded-xl gap-2 ">
         <img
           className="relative h-auto w-52 rounded-full drop-shadow-md mb-5"
-          src="images/ulrikaprofilvit1.jpg"
+          src="images/testname2.jpg"
           alt="Profile-picture"
         />
         <div className="flex flex-col relative bg-white/70 rounded-xl p-4  ">
@@ -22,7 +22,7 @@ export default function ContactStaff() {
       <div className="h-96 pl-5 pr-5 flex items-center justify-center flex-col rounded-xl gap-2">
         <img
           className="relative h-auto w-52 rounded-full drop-shadow-md mb-5"
-          src="images/carinaprofilvit1.jpg"
+          src="images/testname1.jpg"
           alt="Profile-picture"
         />
         <div className="flex flex-col relative bg-white/70 rounded-xl p-4">
